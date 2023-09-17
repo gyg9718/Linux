@@ -17,6 +17,31 @@ vim 파일이름.c
 gcc -o 실행파일이름 소스파일
 ./실행파일이름
 ```
+## InfluxDB2 install
+* InfluxDB download key using wget
+```
+  wget -q https://repos.influxdata.com/influxdata-archive_compat.key
+  echo '393e8779c89ac8d958f81f942f9ad7fb82a25e133faddaf92e15b16e6ac9ce4c influxdata-archive_compat.key' | sha256sum -c && cat influxdata-archive_compat.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/influxdata-archive_compat.gpg > /dev/null
+  echo 'deb [signed-by=/etc/apt/trusted.gpg.d/influxdata-archive_compat.gpg] https://repos.influxdata.com/debian stable main' | sudo tee /etc/apt/sources.list.d/influxdata.list
+```
+* Pakaes are up to data && install Influxdb2
+  ```
+  sudo apt-get updata && sudo apt-get instal influxdb2 -y
+  ```
+* error) can't find influxdb2 pakage
+* * influxdb1 install
+    ```
+    sudo apt-get install influxdb-y
+    ```
+
+* InfluxDB as a backgroundservice on startup
+  ```
+  sudo service influxdb start
+  ```
+* InfluxDB is status(service)
+  ```
+  sudo service influxdb status
+  ```
 # 파이썬 네트워크 프로그래밍
 ## 타임 서버 프로그램
 -> 소켓을 사용하여 TCP서버를 구성하는 과정
