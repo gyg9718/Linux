@@ -31,7 +31,7 @@ gcc -o 실행파일이름 소스파일
 * error) can't find influxdb2 pakage
 * * influxdb1 install
     ```
-    sudo apt-get install influxdb-y
+    sudo apt-get install influxdb -y
     ```
 
 * InfluxDB as a backgroundservice on startup
