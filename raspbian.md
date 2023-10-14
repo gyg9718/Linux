@@ -42,6 +42,24 @@ gcc -o 실행파일이름 소스파일
   ```
   sudo service influxdb status
   ```
+## Grafana install
+* Repository's GPGkey +
+```
+wget -q -O - https://packages.grafana.com/gpg.key | sudo apt-key add -
+```
+* Repository +
+```
+echo "deb https://packages.grafana.com/oss/deb stable main" | sudo tee -a /etc/apt/sources.list.d/grafana.list
+```
+* program install
+```
+sudo apt update
+sudo apt install grafana
+```
+* program progress
+```
+sudo service grafana-server start
+```
 # 파이썬 네트워크 프로그래밍
 ## 타임 서버 프로그램
 -> 소켓을 사용하여 TCP서버를 구성하는 과정
