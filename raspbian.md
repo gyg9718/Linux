@@ -26,7 +26,7 @@ gcc -o 실행파일이름 소스파일
 ```
 * Pakaes are up to data && install Influxdb2
   ```
-  sudo apt-get update && sudo apt-get instal influxdb2 -y
+  sudo apt-get update && sudo apt-get install influxdb2 -y
   ```
 * error) can't find influxdb2 pakage
 * * influxdb1 install
